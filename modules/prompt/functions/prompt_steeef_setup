@@ -35,11 +35,10 @@ function prompt_steeef_setup {
   prompt_opts=(cr percent subst)
 
   # Load required functions.
-  autoload -Uz add-zsh-hook
   autoload -Uz vcs_info
 
   # Add hook for calling vcs_info before each command.
-  add-zsh-hook precmd prompt_steeef_precmd
+  precmd_functions+=(prompt_steeef_precmd)
 
   # Use extended color pallete if available.
   if [[ $TERM = *256color* || $TERM = *rxvt* ]]; then

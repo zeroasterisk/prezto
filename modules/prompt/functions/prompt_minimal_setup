@@ -26,11 +26,10 @@ function prompt_minimal_setup {
   prompt_opts=(cr percent subst)
 
   # Load required functions.
-  autoload -Uz add-zsh-hook
   autoload -Uz vcs_info
 
   # Add hook for calling vcs_info before each command.
-  add-zsh-hook precmd prompt_minimal_precmd
+  precmd_functions+=(prompt_minimal_precmd)
 
   # Set vcs_info parameters.
   zstyle ':vcs_info:*' enable bzr git hg svn

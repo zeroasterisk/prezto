@@ -25,11 +25,8 @@ function prompt_sorin_setup {
   unsetopt XTRACE KSH_ARRAYS
   prompt_opts=(cr percent subst)
 
-  # Load required functions.
-  autoload -Uz add-zsh-hook
-
   # Add hook for calling git-info before each command.
-  add-zsh-hook precmd prompt_sorin_precmd
+  precmd_functions+=(prompt_sorin_precmd)
 
   zstyle ':prezto:module:editor' completing '%B%F{red}...%f%b'
   zstyle ':prezto:module:editor:keymap:primary' overwrite ' %F{red}♺%f'

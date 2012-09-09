@@ -31,11 +31,10 @@ function prompt_peepcode_setup {
   prompt_opts=(cr percent subst)
 
   # Load required functions.
-  autoload -Uz add-zsh-hook
   autoload -Uz vcs_info
 
-  # Add hook for calling vcs_info before each command.
-  add-zsh-hook precmd prompt_peepcode_precmd
+  # Add hook for calling git-info before each command.
+  precmd_functions+=(prompt_peepcode_precmd)
 
   # Set vcs_info parameters.
   zstyle ':vcs_info:*' enable git

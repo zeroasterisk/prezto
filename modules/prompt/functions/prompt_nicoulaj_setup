@@ -29,11 +29,10 @@ function prompt_nicoulaj_setup {
   prompt_opts=(cr percent subst)
 
   # Load required functions.
-  autoload -Uz add-zsh-hook
   autoload -Uz vcs_info
 
   # Add hook for calling vcs_info before each command.
-  add-zsh-hook precmd prompt_nicoulaj_precmd
+  precmd_functions+=(prompt_nicoulaj_precmd)
 
   # Customizable parameters.
   local max_path_chars=30
