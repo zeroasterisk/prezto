@@ -118,7 +118,7 @@ improve its performance, do not hesitate to fork and send pull requests.
 
 #### Modules
 
-   - A *README.md* must be present.
+   - Markdown and man page documentation must be present.
    - Large functions must be placed in a *functions* directory.
    - Functions that take arguments must have completion.
 
