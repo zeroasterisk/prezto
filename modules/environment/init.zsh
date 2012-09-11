@@ -54,3 +54,13 @@ if zstyle -t ':prezto:environment:termcap' color; then
   export LESS_TERMCAP_us=$'\E[01;32m'      # Begins underline.
 fi
 
+#
+# Paths
+#
+
+# Set the list of directories that man searches for manuals.
+manpath=(
+  ${ZDOTDIR:-$HOME}/.zprezto/documentation/man
+  $manpath
+)
+
