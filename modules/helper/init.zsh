@@ -21,6 +21,11 @@ function is-true {
   [[ -n "$1" && "$1" == (1|[Yy]([Ee][Ss]|)|[Tt]([Rr][Uu][Ee]|)|[Oo]([Nn]|)) ]]
 }
 
+# Checks a boolean variable for "false".
+function is-false {
+  is-true "$1" && return 1 || return 0
+}
+
 # Prints the first non-empty string in the arguments array.
 function coalesce {
   for arg in $argv; do

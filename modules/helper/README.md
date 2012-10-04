@@ -12,6 +12,7 @@ Functions
     in a subshell.
   - `is-callable` checks if a name is a command, function, or alias.
   - `is-true` checks a boolean variable for "true".
+  - `is-false` checks a boolean variable for "false".
   - `coalesce` prints the first non-empty string in the arguments array.
 
 Authors
