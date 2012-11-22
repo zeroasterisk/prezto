@@ -5,6 +5,11 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
+# 2% random chance of running update when creating a new shell
+if [[ $[RANDOM % 50 + 1] == 1 ]]; then
+	${ZDOTDIR:-$HOME}/.zprezto/update-prezto.pl
+fi
+
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"

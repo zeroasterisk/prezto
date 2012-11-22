@@ -139,6 +139,9 @@ fi
 # Serves a directory via HTTP.
 alias http-serve='python -m SimpleHTTPServer'
 
+# Updater
+alias zupdate='~/.zprezto/update-prezto.pl'
+
 #
 # Functions
 #
