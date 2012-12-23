@@ -115,6 +115,13 @@ zstyle ':prezto:module:prompt' theme 'steeef'
 #   'pattern' \
 #   'cursor' \
 #   'root'
+#
+# Set syntax highlighting styles.
+# zstyle ':prezto:module:syntax-highlighting' styles \
+#   'builtin' 'bg=blue' \
+#   'command' 'bg=blue' \
+#   'function' 'bg=blue'
+#
 
 #
 # Terminal
